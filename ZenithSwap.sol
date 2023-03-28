@@ -1374,11 +1374,11 @@ library SafeMath {
 
 pragma solidity ^0.8.0;
 
-contract Zenith is ERC20Capped, Pausable, AccessControl {
+contract ZenithSwap is ERC20Capped, Pausable, AccessControl {
     using SafeMath for uint256;
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 
-    constructor() ERC20("Zenith", "ZSP") ERC20Capped(500000000e18) {
+    constructor() ERC20("ZenithSwap", "ZSP") ERC20Capped(500000000e18) {
         _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _mint(msg.sender, 5000000e18);
     }
